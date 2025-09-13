@@ -1,74 +1,65 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# React User Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
+Este é um projeto de dashboard de usuários criado com React. Permite visualizar, criar, editar e excluir usuários (quando o backend suporta). O projeto utiliza uma série de bibliotecas modernas para facilitar o desenvolvimento e o gerenciamento de estado e dados assíncronos.
 
-Currently, two official plugins are available:
+## Ferramentas e Bibliotecas Utilizadas
+- React: biblioteca principal para construção da interface.
+- React Router: gerenciamento de rotas no frontend.
+- Ant Design: biblioteca de componentes UI para React.
+- Axios: cliente HTTP para requisições à API.
+- TypeScript: tipagem estática para maior segurança e manutenção.
+- DummyJSON: API de teste para simulação de dados de usuários.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Pré-requisitos
+Antes de começar, certifique-se de ter instalado:
+- Node.js (versão recomendada >= 18)
+- npm ou yarn
+- Git
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Instalação
+1. Clone o repositório:
+```bash
+git clone https://github.com/serafimschoffen/React-App.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Entre na pasta do projeto:
+```bash
+cd React-App
 ```
-=======
-# React-App
-Aplicação de lista e CRUD de usuários para processo seletivo da ID Brasil sistemas.
->>>>>>> 4e689034d6d3ff2c30f134464cae8428fc8a0e3a
+
+3. Instale as dependências:
+```bash
+npm install
+# ou
+yarn install
+```
+
+## Execução Local
+Para rodar o projeto em modo de desenvolvimento:
+```bash
+npm run dev
+```
+- O projeto será aberto no navegador em `http://localhost:5173/login`.
+
+## Estrutura de Pastas
+- `src/pages/`: páginas da aplicação como Login, Dashboard e UserDetails.
+- `src/components/`: componentes reutilizáveis, como Header e UserTable.
+- `src/utils/`: utilitários e funções de suporte, incluindo `auth` e `api`.
+- `src/App.tsx`: configurações de rotas e ProtectedRoute.
+- `src/main.tsx`: ponto de entrada da aplicação.
+
+## Funcionalidades
+- Login com gerenciamento de sessão e roles (Admin/User).
+- Dashboard com tabela de usuários.
+- Criação, edição e exclusão de usuários via modal (dependendo do backend).
+- Visualização de detalhes de usuários.
+- Controle de acesso a rotas protegidas baseado no role do usuário.
+- Dark mode configurável pelo usuário.
+
+## Observações
+- O projeto utiliza a API DummyJSON como backend de teste. Algumas operações como atualização ou exclusão podem não refletir mudanças reais na API pública.
+- Para teste das funcionalidades, recomendo uso do usuário emilys e senha emilyspass.
+
+## Licença
+Este projeto é de uso pessoal/educacional. Modifique conforme necessário para seus projetos.
